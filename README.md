@@ -4,7 +4,7 @@ A Flutter mobile application for detecting and extracting information from Pakis
 
 ## Overview
 
-This project is forked from the [CNIC-Detection repository](https://github.com/your-username/CNIC-Detection) and has been adapted for mobile deployment. The app uses a nano version of the same YOLO model that has been converted to TensorFlow Lite (TFLite) format to enable all AI operations to work directly within the mobile application without requiring external API calls.
+This project is forked from the [CNIC-Detection repository](https://github.com/ZemCS/CNIC-Detection) and has been adapted for mobile deployment. The app uses a nano version of the same YOLO model that has been converted to TensorFlow Lite (TFLite) format to enable all AI operations to work directly within the mobile application without requiring external API calls.
 
 ## Features
 
@@ -85,8 +85,8 @@ Add the following permissions to your platform-specific configuration files:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/cnic-detection-flutter.git
-cd cnic-detection-flutter
+git clone https://github.com/ZemCS/CNIC-Detector-App.git
+cd CNIC-Detector-App
 ```
 
 2. Install dependencies:
@@ -142,19 +142,10 @@ flutter run
 ## Code Structure
 
 ```
+assets/
+├── best_float32.tflite          # YOLO inference model
 lib/
 ├── main.dart                 # App entry point and main widget
-├── models/
-│   ├── parsed_cnic_data.dart # Data model for CNIC information
-│   └── detection.dart        # Detection result model
-├── services/
-│   └── cnic_detection_service.dart # Core ML and OCR service
-├── screens/
-│   ├── camera_screen.dart    # Camera capture interface
-│   ├── results_screen.dart   # Results display with bounding boxes
-│   └── data_screen.dart      # Extracted data display
-└── widgets/
-    └── bounding_box_painter.dart # Custom painter for detection visualization
 ```
 
 ## Known Limitations
